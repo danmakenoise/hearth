@@ -1,0 +1,24 @@
+{
+  "name": "hearth",
+  "version": "1.0.0",
+  "description": "Hearth is a private server you run on your own machine that helps create a browser independent home page for all your internet needs!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danmakenoise/hearth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danmakenoise/hearth/issues"
+  },
+  "homepage": "https://github.com/danmakenoise/hearth#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.8"
+  }
+}
