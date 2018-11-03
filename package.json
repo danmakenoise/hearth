@@ -4,8 +4,9 @@
   "description": "Hearth is a private server you run on your own machine that helps create a browser independent home page for all your internet needs!",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "lint": "eslint .",
-    "start": "node lib/server.js"
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
     "eslint": "^5.8.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14.3",
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2"
   }
 }
