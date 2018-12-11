@@ -1,18 +1,22 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./client/index.js",
+  entry: "./src/client/index.tsx",
+  devtool: "source-map",
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: "babel-loader"
-      }
+      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+
+      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
     ]
   },
   output: {
-    path: path.resolve(__dirname, "server/public"),
+    path: path.resolve(__dirname, "public"),
     filename: "bundle.js"
   }
 };

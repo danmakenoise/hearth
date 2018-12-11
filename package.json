@@ -4,10 +4,11 @@
   "description": "Hearth is a private server you run on your own machine that helps create a browser independent home page for all your internet needs!",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "webpack",
     "build:server": "rm -rf dist/server && tsc",
-    "lint": "eslint .",
-    "start": "npm run build:server && node dist/server/server.js"
+    "lint": "tslint ./src/**/*.ts{,x}",
+    "start": "npm run build && node dist/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -34,15 +35,21 @@
     "@types/express": "^4.16.0",
     "@types/mongoose": "^5.3.4",
     "@types/node": "^10.12.12",
+    "@types/react": "^16.7.13",
+    "@types/react-dom": "^16.0.11",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "eslint": "^5.8.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.3",
+    "prettier": "^1.15.3",
+    "source-map-loader": "^0.2.4",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.2.2",
     "webpack": "^4.24.0",
     "webpack-cli": "^3.1.2"
