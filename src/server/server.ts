@@ -1,11 +1,11 @@
-/* eslint-disable no-console */
-const bodyParser = require("body-parser");
-const express = require("express");
-const mongoose = require("mongoose");
-const path = require("path");
+/* tslint:disable no-console */
+import * as bodyParser from "body-parser";
+import * as express from "express";
+import * as mongoose from "mongoose";
+import * as path from "path";
 
-const bookmarksRouter = require("./routes/bookmarks");
-const config = require("./db");
+import config from "./db";
+import bookmarksRouter from "./routes/bookmarks";
 
 mongoose
   .connect(config.DB)

@@ -1,5 +1,5 @@
-const express = require("express");
-const Bookmark = require("../models/Bookmark");
+import * as express from "express";
+import Bookmark from "../models/Bookmark";
 
 const router = express.Router();
 
@@ -23,4 +23,4 @@ router.route("/").get((_, res) => {
   });
 });
 
-module.exports = router;
+export default router;
